@@ -1,0 +1,51 @@
+body {
+	background:#f1f1f1;
+	font-family: "Microsoft YaHei", simsun, Arial;
+	font-size: 12px;
+	color: #999;
+	line-height: 18px;
+}
+h1, h2, h3 {
+	font-size: 14px;
+}
+h4, h5, h6 {
+	font-size: 12px;
+}
+h1, h2, h3,h4, h5, h6 {
+	color:#333;
+}
+a{
+	color:#333;
+	text-decoration:none;
+}
+a:hover{
+	color:#008dde;
+}
+a i{
+	cursor: pointer;
+}
+/**/
+.a1{
+	background:#ff3300;
+}
+.a2{
+	background:#ff6600;
+}
+.a3{
+	background: #ff9900;
+}
+.a4{
+	background: #ffee00;
+}
+.page{
+	text-align:center;
+	color:#333;
+}
+.page-wrap{
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden; 
+}
