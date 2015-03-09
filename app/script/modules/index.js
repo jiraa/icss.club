@@ -1,20 +1,18 @@
 define([
-		'plugin/fullPage'
+		'plugin/fullPage',
+		'plugin/detect'
 	],
 	function(
-		fullPage
+		fullPage, detect
 	) {
 
 		function initView() {
-			$('.wp-inner').fullpage({
-				page: '.page',
-				duration: 500,
-				drag: true,
-				change: function() {},
-				beforeChange: function() {},
-				afterChange: function() {},
-				orientationchange: function() {}
-			});
+			console.log(detect);
+			console.log($.os);
+			if($.os.phone){
+			}else if($.os.tablet){
+			}else{
+			}
 		}
 
 		function show() {
