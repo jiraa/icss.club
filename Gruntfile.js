@@ -99,6 +99,36 @@ module.exports = function(grunt) {
                 'copy',
                 'imagemin'
             ]
+        },
+        connect: {
+            options: {
+                port: 9000,
+                hostname: '*',
+                livereload: 35729
+            },
+
+            server: {
+                options: {
+                    open: true,
+                    base: [
+                        '<%= page.dist %>'
+                    ]
+                }
+            }
+        },
+        watch: {
+            livereload: {
+                options: {
+                    livereload: '<%=connect.options.livereload%>' //监听前面声明的端口  35729
+                },
+
+                files: [ //下面文件的改变就会实时刷新网页
+                    'app/*.html',
+                    'app/style/{,*/}*.css',
+                    'app/scripts/{,*/}*.js',
+                    'app/images/{,*/}*.{png,jpg}'
+                ]
+            }
         }
     });
     grunt.registerTask('hi', function() {
@@ -107,7 +137,9 @@ module.exports = function(grunt) {
             'concurrent:server',
             'autoprefixer',
             'cssmin',
-            'requirejs:dist'
+            'requirejs:dist',
+            'connect',
+            'watch'
         ]);
     });
     grunt.registerTask('default', []);
