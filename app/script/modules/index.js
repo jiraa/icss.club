@@ -7,8 +7,6 @@ define([
 	) {
 
 		function initView() {
-			console.log(detect);
-			console.log($.os);
 			if($.os.phone){
 			}else if($.os.tablet){
 			}else{

@@ -118,16 +118,16 @@ module.exports = function(grunt) {
         },
         watch: {
             livereload: {
-                options: {
-                    livereload: '<%=connect.options.livereload%>' //监听前面声明的端口  35729
-                },
-
                 files: [ //下面文件的改变就会实时刷新网页
                     'app/*.html',
                     'app/style/{,*/}*.css',
-                    'app/scripts/{,*/}*.js',
-                    'app/images/{,*/}*.{png,jpg}'
-                ]
+                    'app/script/{,*/}*.js',
+                    'app/image/{,*/}*.{png,jpg}'
+                ],
+                tasks: ['hi'],
+                options: {
+                    livereload: '<%=connect.options.livereload%>' //监听前面声明的端口  35729
+                },
             }
         }
     });

@@ -11,9 +11,9 @@ require({
 (function() {
 
     require(
-        ['lib/zepto','modules/index'],
+        ['modules/index'],
 
-        function($,index) {
+        function(index) {
             index.preload().show();
         });
 })();

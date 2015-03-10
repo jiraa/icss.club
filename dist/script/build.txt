@@ -1,7 +1,6 @@
 
 page/index.js
 ----------------
-lib/zepto.js
 plugin/fullPage.js
 plugin/detect.js
 modules/index.js
