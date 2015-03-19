@@ -33,7 +33,7 @@ define([
 		}
 		function pcInitView(){
 			console.log("%c练小习，熟练掌握css，熟练掌握js，熟悉若干css以及js框架，喜欢研究，喜欢新技术。精通魔兽世界各职业pev技能，精通炉石传说各职业打法。","background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #4096EE), color-stop(0.15, #FF1A00), color-stop(0.3, #4096EE), color-stop(0.45, #FF1A00), color-stop(0.6, #4096EE),color-stop(0.75, #FF1A00), color-stop(0.9, #4096EE), color-stop(1, #FF1A00) );color:transparent;-webkit-background-clip: text;font-size:14px;");
-			console.log("%c", "padding:50px 300px;background:url('http://www.chengrang.com/image/233.gif') no-repeat;");
+			console.log("%c", "padding:40px 250px; line-height:150px;background:url('http://www.chengrang.com/image/233.gif') no-repeat;");
 		}
 		function bindEvent() {
 			var $fullEl = $('.wp-inner', $('body'));
@@ -47,9 +47,11 @@ define([
 
 		function addItem(e) {
 			var animateNum = Math.floor(Math.random()*7 + 1);
+			var boxNum = Math.floor(Math.random()*5+1);
 			var data = {};
 			data.num = animateNum;
 			data.e = e;
+			data.box = boxNum;
 			$('.page').html('');
 			$('.page' + e.next).html(itemTpl[e.next](data));
 		}
