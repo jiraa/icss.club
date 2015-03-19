@@ -33,21 +33,22 @@ module.exports = function(grunt) {
         requirejs: {
             options: {
                 baseUrl: '<%= page.app %>/script',
+                // appdir: '<%= page.app %>/script',
                 dir: '<%= page.dist %>/script',
                 optimize: 'uglify2',
                 preserveLicenseComments: false,
                 uglify2: {
                     ascii_only: true
-                },
-                removeCombined: true
+                }
+                
             },
             dist: {
-
                 options: {
-                    paths: {},
+                    paths: {'text': 'lib/text' },
                     modules: [{
                         name: 'page/index'
-                    }]
+                    }],
+                    removeCombined: true
                 }
             }
         },
@@ -55,9 +56,9 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '<%= page.app %>/images',
+                    cwd: '<%= page.app %>/image',
                     src: '{,*/}*.{gif,jpeg,jpg,png,cur}',
-                    dest: '<%= page.dist %>/images'
+                    dest: '<%= page.dist %>/image'
                 }]
             }
         },
@@ -70,7 +71,7 @@ module.exports = function(grunt) {
                     dest: '<%= page.dist %>',
                     src: [
                         '.htaccess',
-                        'images/*.cur',
+                        'image/*.{cur,ico,f4v}',
                         'font/*.*',
                         '*.html'
                     ]
@@ -120,7 +121,8 @@ module.exports = function(grunt) {
             livereload: {
                 files: [ //下面文件的改变就会实时刷新网页
                     'app/*.html',
-                    'app/style/{,*/}*.css',
+                    'app/template/*.html',
+                    'app/style/{,*/}*.scss',
                     'app/script/{,*/}*.js',
                     'app/image/{,*/}*.{png,jpg}'
                 ],
@@ -137,7 +139,7 @@ module.exports = function(grunt) {
             'concurrent:server',
             'autoprefixer',
             'cssmin',
-            'requirejs:dist',
+            'requirejs',
             'connect',
             'watch'
         ]);

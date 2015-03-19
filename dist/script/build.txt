@@ -1,7 +1,14 @@
 
 page/index.js
 ----------------
-plugin/fullPage.js
+lib/doT.js
+lib/text.js
+text!template/m.html!strip
+text!template/pc.html!strip
+text!template/item0.html!strip
+text!template/item1.html!strip
+text!template/item2.html!strip
 plugin/detect.js
+plugin/fullpage.js
 modules/index.js
 page/index.js

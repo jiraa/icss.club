@@ -1,0 +1,12 @@
+html, body{background:#000;}
+.pc-warp{ width: 480px; float: right; overflow: hidden; zoom:1; background: url(../image/index.jpg) no-repeat; margin-top: 60px; color: #cccccc; padding-top: 210px; text-align:left;}
+.pc-warp h1{ font-size: 14px; padding-left: 30px; padding-bottom: 10px;color: #cccccc; }
+p.links{ color: #fff; font-size: 14px; font-weight: bold; padding-left: 30px; }
+p.links a{ color: #FFcc00; text-decoration: none; font-size: 12px; margin-right: 10px;}
+p.links a:hover{ color: #FFcc00; text-decoration: underline;}
+p.text{ font-size: 12px; line-height: 180%; margin: 15px 0; padding-left: 30px; padding-right: 15px; }
+p.text a{color: #FFcc00; text-decoration: none; font-size: 12px;}
+p.text a:hover{ color: #FFcc00; text-decoration: underline;}
+p.list{ font-size: 12px; line-height: 180%; padding-left: 30px; }
+p.list a{ color: #ccc; text-decoration: none;  }
+p.list a:hover{text-decoration: underline; }

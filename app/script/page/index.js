@@ -1,19 +1,12 @@
-require({
-    baseUrl: '../',
+require.config({
     paths: {
-    },
-    config: {
-
+        'text': 'lib/text'
     }
 });
+require(
+    ['modules/index'],
 
-;
-(function() {
-
-    require(
-        ['modules/index'],
-
-        function(index) {
-            index.preload().show();
-        });
-})();
+    function(index) {
+        index.preload().show();
+    }
+);
