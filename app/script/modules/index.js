@@ -37,8 +37,6 @@ define([
 		}
 		function bindEvent() {
 			var $fullEl = $('.wp-inner', $('body'));
-			console.log($('.m-wrap').height());
-			console.log($fullEl.height());
 			$fullEl.fullpage({
 				// change: addItem,
 				// beforeChange: function() {},
